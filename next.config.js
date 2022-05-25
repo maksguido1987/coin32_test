@@ -4,6 +4,13 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-}
+  images: {
+    domains: ['media.rawg.io'],
+  },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL,
+    API_KEY: process.env.API_KEY,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
