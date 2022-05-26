@@ -7,7 +7,7 @@ import search from '../../../public/icons/search.png';
 export const SearchIcon = () => {
   return (
     <SearchIconStyled>
-      <Image src={search} alt='search-logo' width={15} height={15} />
+      <Image src={search} alt='search-logo' width={15} height={15} className='search-icon' />
     </SearchIconStyled>
   );
 };

@@ -6,13 +6,14 @@ import {
   ImageContainerStyled,
 } from './game-card.styled';
 import { useRouter } from 'next/router';
+import { GameRating } from './GameRating';
 
 export const GameCard = React.memo(
   ({ id, background_image, name, rating, released }) => {
     const router = useRouter();
 
     return (
-      <GameCardContainerStyled onClick={() => router.push(`game/${id}`)}>
+      <GameCardContainerStyled onClick={() => router.push(`games/${id}`)}>
         <ImageContainerStyled>
           <Image
             src={background_image}
@@ -23,9 +24,7 @@ export const GameCard = React.memo(
         </ImageContainerStyled>
         <div className='game-card__info'>
           <a className='game-card__link'>{name}</a>
-          <div className='game-card__rating'>
-            Rating: <span>{rating}</span>
-          </div>
+          <GameRating rating={rating} />
           <div className='game-card__released'>
             Released: <span>{released}</span>
           </div>

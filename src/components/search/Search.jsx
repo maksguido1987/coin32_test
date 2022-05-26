@@ -10,7 +10,7 @@ export const Search = () => {
   return (
     <SearchContainerStyled>
       <SearchlabelStyled>
-        <SearchInputStyled placeholder='Search737, 339 games' />
+        <SearchInputStyled placeholder='Search 737, 339 games' />
         <SearchIcon />
       </SearchlabelStyled>
     </SearchContainerStyled>

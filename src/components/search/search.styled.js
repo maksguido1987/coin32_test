@@ -14,10 +14,13 @@ export const SearchlabelStyled = styled.label`
 
 export const SearchInputStyled = styled.input`
   width: 100%;
-  padding: 10px 0 10px 40px;
+  padding: 5px 0 5px 20px;
 
-  font-size: 18px;
+  font-size: 16px;
   color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   background-color: var(--gray);
 
@@ -40,5 +43,11 @@ export const SearchInputStyled = styled.input`
     color: var(--white);
     font-size: 14px;
     opacity: 0.6;
+  }
+
+  @media (min-width: 640px) {
+    padding: 10px 0 10px 40px;
+
+    font-size: 18px;
   }
 `;

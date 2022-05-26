@@ -39,7 +39,6 @@ export const GameCardContainerStyled = styled.div`
       text-decoration: none;
     }
 
-    &__rating,
     &__released {
       font-size: 12px;
       color: var(--gray);
@@ -72,5 +71,20 @@ export const ImageContainerStyled = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+  }
+`;
+
+export const RatingStyled = styled.div`
+  font-size: 12px;
+  color: var(--gray);
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  & > span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
   }
 `;

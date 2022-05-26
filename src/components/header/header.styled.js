@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
   right: 0;
   z-index: 20;
 
-  padding: 10px 0;
+  padding: 10px;
   margin: 0 auto;
 
   display: flex;
@@ -20,6 +20,6 @@ export const HeaderStyled = styled.header`
   background-color: var(--black);
 
   @media (min-width: 768px) {
-    padding: 20px 0;
+    padding: 20px;
   }
 `

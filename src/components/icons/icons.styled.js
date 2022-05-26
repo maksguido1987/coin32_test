@@ -27,10 +27,21 @@ export const LogoStyled = styled.a`
 export const SearchIconStyled = styled.div`
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 5px;
   transform: translateY(-50%);
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 12px;
+  height: 12px;
+
+  @media (min-width: 640px) {
+    top: 50%;
+    left: 15px;
+
+    width: 15px;
+    height: 15px;
+  }
 `;

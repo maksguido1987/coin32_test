@@ -2,19 +2,24 @@ import { getGames } from '../api/api';
 import { Games, Layout } from '../components';
 
 export default function Home({ games }) {
-  console.log(games);
 
   return (
     <Layout>
-      <Games games={games.results} />
+      <Games games={games} />
     </Layout>
   );
 }
 
 export async function getServerSideProps() {
-  const games = await getGames();
+  try {
+    const games = await getGames();
 
-  return {
-    props: { games },
-  };
+    return {
+      props: { games },
+    };
+  } catch (error) {
+    return {
+      notFound: true,
+    };
+  }
 }

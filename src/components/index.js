@@ -5,3 +5,5 @@ export * from './search';
 export * from './games';
 export * from './filters';
 export * from './game-card';
+export * from './game-details';
+export * from './screen-shots-bar';

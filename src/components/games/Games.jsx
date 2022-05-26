@@ -20,7 +20,7 @@ export const Games = ({ games }) => {
 
   return (
     <GamesStyled>
-      <h1 className='home-page__title'>New and trending</h1>
+      <h1 className='home-page__title'>All Games</h1>
       <p>Based on player counts and release date</p>
       <Filters />
       <div className='games-container'>{games && games.map(renderGame)}</div>
