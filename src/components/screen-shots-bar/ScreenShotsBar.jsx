@@ -4,9 +4,10 @@ import Image from 'next/image';
 import {
   ScreenShotsArrowStyled,
   ScreenShotsStyled,
+  SpinnerStyled,
 } from './screen-shots-bar.styled';
 
-export const ScreenShotsBar = ({ screenshots }) => {
+export const ScreenShotsBar = ({ screenshots, isLoading }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const length = screenshots?.results.length;
 
@@ -27,6 +28,7 @@ export const ScreenShotsBar = ({ screenshots }) => {
         alt='screen'
         objectFit='cover'
         layout='fill'
+        priority
         className={`${index === currentImage ? 'visible' : 'hidden'}`}
       />
     );
@@ -35,7 +37,7 @@ export const ScreenShotsBar = ({ screenshots }) => {
   return (
     <ScreenShotsStyled>
       <ScreenShotsArrowStyled left={'3%'} onClick={prevSlide} />
-      {screenshots?.results.map(renderImage)}
+      {isLoading ? <SpinnerStyled /> : screenshots.results.map(renderImage)}
       <ScreenShotsArrowStyled rotate={'180'} right={'3%'} onClick={nextSlide} />
     </ScreenShotsStyled>
   );

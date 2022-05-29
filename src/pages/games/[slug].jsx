@@ -7,11 +7,11 @@ const { publicRuntimeConfig } = getConfig();
 export const { BASE_URL, API_KEY } = publicRuntimeConfig;
 
 export default function GameSlug({ game }) {
-  const { screenshots, isLoading, error } = getScreenshots(game.slug);
+  const { screenshots, isLoading } = getScreenshots(game.slug);
 
   return (
     <Layout>
-      <GameDetails game={game} screenshots={screenshots} />
+      <GameDetails game={game} screenshots={screenshots} isLoading={isLoading} />
     </Layout>
   );
 }

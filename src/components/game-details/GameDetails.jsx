@@ -13,7 +13,7 @@ import GameGenres from './GameGenres';
 import { GamePlatforms } from './GamePlatforms';
 import { ScreenShotsBar } from '../screen-shots-bar';
 
-export const GameDetails = ({ game, screenshots }) => {
+export const GameDetails = ({ game, screenshots, isLoading }) => {
   const {
     name,
     website,
@@ -58,7 +58,7 @@ export const GameDetails = ({ game, screenshots }) => {
             layout='fill'
           />
         </MainImageStyled>
-        <ScreenShotsBar screenshots={screenshots} />
+        <ScreenShotsBar screenshots={screenshots} isLoading={isLoading} />
       </DetailsImagesStyled>
     </DetailsContainerStyled>
   );

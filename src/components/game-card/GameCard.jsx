@@ -20,6 +20,7 @@ export const GameCard = React.memo(
             alt={name}
             objectFit='cover'
             layout='fill'
+            priority
           />
         </ImageContainerStyled>
         <div className='game-card__info'>

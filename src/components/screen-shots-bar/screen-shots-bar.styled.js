@@ -49,3 +49,31 @@ export const ScreenShotsArrowStyled = styled.div`
 
   cursor: pointer;
 `;
+
+export const SpinnerStyled = styled.div`
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  background: url('/icons/spinner.png') center / cover no-repeat;
+
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
